@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>co2_prediction</title>
+</head>
+<body>
+    
+    
+    <style>
+        body {
+          background-image: "static\images\new1.jpg";
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+        </style>
+    <h1 style="color:rgb(255, 0, 55);"><b> CO<sub>2</sub> Prediction </b> <img src="static\images\new_image.jpg" alt="Car Image" height="100"></h1>
+    <p style="color:rgb(255, 230, 0);"> <b>The below data is Required to be filled by the User, to get the approx amount of co2 Emission</b> </p>
+    <form method="POST" action="/co2_emmission">
+
+        <label><b>make:</b></label>
+        <input type = "text" name = "make"> <i style="color:rgb(255, 0, 0);">*Manufacturer of the vehicle</i> 
+        </select>
+
+        <br>
+        <br>
+
+        <label><b>model:</b></label>
+        <input type = "text" name = "model"> <i style="color:rgb(255, 0, 0);">*model of the vehicle</i> 
+        </select>
+       
+        <br>
+        <br>
+
+        <label><b>Vehicle_Class:</b></label>
+        <select name = "Vehicle_Class">
+            <option value = "SUV - SMALL">SUV_SMALL</option>
+            <option value = "MID-SIZE">MID-SIZE</option>
+            <option value = "COMPACT">COMPACT</option>
+            <option value = "SUV - STANDARD">SUV - STANDARD</option>
+            <option value = "FULL-SIZE">FULL-SIZE</option>
+            <option value = "SUBCOMPACT">SUBCOMPACT</option>
+            <option value = "PICKUP TRUCK - STANDARD">PICKUP TRUCK - STANDARD</option>
+            <option value = "TWO-SEATER">TWO-SEATER</option>
+            <option value = "MINICOMPACT">MINICOMPACT</option>
+            <option value = "STATION WAGON - SMALL">STATION WAGON - SMALL</option>
+            <option value = "PICKUP TRUCK - SMALL">PICKUP TRUCK - SMALL</option>
+            <option value = "MINIVAN">MINIVAN</option>
+            <option value = "SPECIAL PURPOSE VEHICLE">SPECIAL PURPOSE VEHICLE</option>
+            <option value = "VAN - PASSENGER">VAN - PASSENGER</option>
+            <option value = "STATION WAGON - MID-SIZE">STATION WAGON - MID-SIZE</option>
+            <option value = "VAN - CARGO">VAN - CARGO</option>
+
+        </select> <i style="color:rgb(255, 0, 0);"> *Select vehical class from the dropdown list</i>
+
+        <br>
+        <br>
+
+        <label><b>Engine_Size:</b></label>
+        <input type = "text" name = "Engine_Size">
+        </select> <i style="color:rgb(255, 0, 0);"> *type engine size. e.g. 3.3 </i>
+
+        <br>
+        <br>
+
+        <label><b>Cylinders:</b></label>
+        <input type = "text" name = "Cylinders">
+        </select> <i style="color:rgb(255, 0, 0);"> *Type No of cylinders e.g. 1 </i>
+
+        <br>
+        <br>
+
+        <label><b>Transmission:</b></label>
+        <input type = "text" name = "Transmission">
+        </select> <i style="color:rgb(255, 0, 0);"> *Type Transmission e.g. AS8 </i>
+
+        <br>
+        <br>
+
+        <label><b>Fuel_Type:</b></label>
+        <input type = "text" name = "Fuel_Type">
+        </select> <i style="color:rgb(255, 0, 0);"> *Type Transmission e.g. Z </i>
+
+        <br>
+        <br>
+
+        <label><b>Fuel_Consumption_City1:</b></label>
+        <input type = "text" name = "Fuel_Consumption_City1">
+        </select> <i style="color:rgb(255, 0, 0);"> *Type Fuel Consumption in City (L/100 km) e.g. 9.9 </i>
+
+        <br>
+        <br>
+
+        <label><b>Fuel_Consumption_Hwy1:</b></label>
+        <input type = "text" name = "Fuel_Consumption_Hwy1">
+        </select> <i style="color:rgb(255, 0, 0);"> *Type Fuel Consumption on Hwy (L/100 km) e.g. 6.7 </i>
+
+        <br>
+        <br>
+
+        <label><b>Fuel_Consumption_Comb2:</b></label>
+        <input type = "text" name = "Fuel_Consumption_Comb2">
+        </select> <i style="color:rgb(255, 0, 0);"> *Type Fuel Consumption Comb (L/100 km) e.g. 8.5 </i>
+
+        <br>
+        <br>
+
+        <label><b>Fuel_Consumption_Comb3:</b></label>
+        <input type = "text" name = "Fuel_Consumption_Comb3">
+        </select> <i style="color:rgb(255, 0, 0);"> *Type Fuel_Consumption in (mpg) e.g. 33 </i>
+
+        <br>
+        <br>
+
+        <input type = "submit" value="SUBMIT">
+
+        <br>
+
+        <h4 style="color:rgb(25, 0, 255);"><strong>CO<sub>2</sub> emission for selected data is <b> {{ prediction }} g/km.</b> fakta </strong></h4>
+
+</body>
+</html>
