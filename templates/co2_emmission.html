@@ -5,36 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>co2_prediction</title>
 </head>
-<body>
-    
-    
+<body background = "static\images\7g7V.gif">
+
     <style>
         body {
-          background-image: "static\images\new1.jpg";
+          background-image: "static\images\giphy.gif";
           background-repeat: no-repeat;
           background-attachment: fixed;
           background-size: cover;
         }
         </style>
-    <h1 style="color:rgb(255, 0, 55);"><b> CO<sub>2</sub> Prediction </b> <img src="static\images\new_image.jpg" alt="Car Image" height="100"></h1>
+    
+    <h1 style="color:rgb(255, 0, 55);"><b> CO<sub>2</sub> Prediction </b></h1>
     <p style="color:rgb(255, 230, 0);"> <b>The below data is Required to be filled by the User, to get the approx amount of co2 Emission</b> </p>
     <form method="POST" action="/co2_emmission">
+        <audio src="static/music/audio1.mp3" controls>
+            <p>If you are reading this, it is because your browser does not support the audio element.</p>
+            </audio> 
+            <br>
 
-        <label><b>make:</b></label>
-        <input type = "text" name = "make"> <i style="color:rgb(255, 0, 0);">*Manufacturer of the vehicle</i> 
+        <label style="color:rgb(0, 204, 255);"><b>  make:</b></label>
+        <input type = "text" name = "make"> <i style="color:rgb(255, 17, 0);">*Manufacturer of the vehicle</i> 
         </select>
 
         <br>
         <br>
 
-        <label><b>model:</b></label>
-        <input type = "text" name = "model"> <i style="color:rgb(255, 0, 0);">*model of the vehicle</i> 
+        <label style="color:rgb(0, 204, 255);"><b>model:</b></label>
+        <input type = "text" name = "model"> <i style="color:rgb(255, 17, 0);">*model of the vehicle</i> 
         </select>
        
         <br>
         <br>
 
-        <label><b>Vehicle_Class:</b></label>
+        <label style="color:rgb(0, 204, 255);"><b>Vehicle_Class:</b></label>
         <select name = "Vehicle_Class">
             <option value = "SUV - SMALL">SUV_SMALL</option>
             <option value = "MID-SIZE">MID-SIZE</option>
@@ -58,56 +62,56 @@
         <br>
         <br>
 
-        <label><b>Engine_Size:</b></label>
+        <label style="color:rgb(0, 204, 255);"><b>Engine_Size:</b></label>
         <input type = "text" name = "Engine_Size">
         </select> <i style="color:rgb(255, 0, 0);"> *type engine size. e.g. 3.3 </i>
 
         <br>
         <br>
 
-        <label><b>Cylinders:</b></label>
+        <label style="color:rgb(0, 204, 255);"><b>Cylinders:</b></label>
         <input type = "text" name = "Cylinders">
         </select> <i style="color:rgb(255, 0, 0);"> *Type No of cylinders e.g. 1 </i>
 
         <br>
         <br>
 
-        <label><b>Transmission:</b></label>
+        <label style="color:rgb(0, 204, 255);"><b>Transmission:</b></label>
         <input type = "text" name = "Transmission">
         </select> <i style="color:rgb(255, 0, 0);"> *Type Transmission e.g. AS8 </i>
 
         <br>
         <br>
 
-        <label><b>Fuel_Type:</b></label>
+        <label style="color:rgb(0, 204, 255);"><b>Fuel_Type:</b></label>
         <input type = "text" name = "Fuel_Type">
         </select> <i style="color:rgb(255, 0, 0);"> *Type Transmission e.g. Z </i>
 
         <br>
         <br>
 
-        <label><b>Fuel_Consumption_City1:</b></label>
+        <label style="color:rgb(0, 204, 255);"><b>Fuel_Consumption_City1:</b></label>
         <input type = "text" name = "Fuel_Consumption_City1">
         </select> <i style="color:rgb(255, 0, 0);"> *Type Fuel Consumption in City (L/100 km) e.g. 9.9 </i>
 
         <br>
         <br>
 
-        <label><b>Fuel_Consumption_Hwy1:</b></label>
+        <label style="color:rgb(0, 204, 255);"><b>Fuel_Consumption_Hwy1:</b></label>
         <input type = "text" name = "Fuel_Consumption_Hwy1">
         </select> <i style="color:rgb(255, 0, 0);"> *Type Fuel Consumption on Hwy (L/100 km) e.g. 6.7 </i>
 
         <br>
         <br>
 
-        <label><b>Fuel_Consumption_Comb2:</b></label>
+        <label style="color:rgb(0, 204, 255);"><b>Fuel_Consumption_Comb2:</b></label>
         <input type = "text" name = "Fuel_Consumption_Comb2">
         </select> <i style="color:rgb(255, 0, 0);"> *Type Fuel Consumption Comb (L/100 km) e.g. 8.5 </i>
 
         <br>
         <br>
 
-        <label><b>Fuel_Consumption_Comb3:</b></label>
+        <label style="color:rgb(0, 204, 255);"><b>Fuel_Consumption_Comb3:</b></label>
         <input type = "text" name = "Fuel_Consumption_Comb3">
         </select> <i style="color:rgb(255, 0, 0);"> *Type Fuel_Consumption in (mpg) e.g. 33 </i>
 
@@ -118,7 +122,7 @@
 
         <br>
 
-        <h4 style="color:rgb(25, 0, 255);"><strong>CO<sub>2</sub> emission for selected data is <b> {{ prediction }} g/km.</b> fakta </strong></h4>
+        <h4 style="color:rgb(25, 0, 255); font-size: larger;"><strong>CO<sub>2</sub> emission for selected data is <b> {{ prediction }} g/km.</b> fakta </strong></h4>
 
 </body>
 </html>
