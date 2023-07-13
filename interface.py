@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 def home():
     #return jsonify({"Result":"success"})
-    return render_template('co2_emmission.html')
+    return render_template('co2_emmission1.html')
 
 
 @app.route('/co2_emmission', methods = ['GET','POST'])
@@ -35,7 +35,7 @@ def predict_co2():
         predicted_co2 = obj.predicted_co2_emmission()
 
         #return jsonify({"Result":f"predicted co2 emmission : {predicted_co2}"})
-        return render_template('co2_emmission.html',prediction = predicted_co2 )
+        return render_template('co2_emmission1.html',prediction = predicted_co2 )
     
     elif request.method=='POST':
 
@@ -59,6 +59,6 @@ def predict_co2():
         predicted_co2 = obj.predicted_co2_emmission()
 
         #return jsonify({"Result":f"predicted co2 emmission : {predicted_co2}"})
-        return render_template('co2_emmission.html',prediction = predicted_co2 )
+        return render_template('co2_emmission1.html',prediction = predicted_co2 )
 if __name__ == '__main__':
     app.run(host = '0.0.0.0', port = config.port_number)

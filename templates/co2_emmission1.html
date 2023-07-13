@@ -1,0 +1,236 @@
+<style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Times New Roman', Times, serif, Helvetica, sans-serif;
+      margin: 0;
+    }
+    
+    /* Style the header */
+    .header {
+      padding: 2px;
+      text-align: center;
+      background: #1abc9c;
+      color: white;
+    }
+    
+    /* Increase the font size of the h1 element */
+    .header h1 {
+      font-size: 30px;
+    }
+    
+    /* Style the top navigation bar */
+    .navbar {
+      overflow: hidden;
+      background-color: #ad0f0f;
+    }
+    
+    /* Style the navigation bar links */
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+    
+    /* Right-aligned link */
+    .navbar a.right {
+      float: right;
+    }
+    
+    /* Change color on hover */
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+    
+    /* Column container */
+    .row {  
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    /* Create two unequal columns that sits next to each other */
+    /* Sidebar/left column */
+    .side {
+      flex: 40%;
+      background-color: rgb(18, 18, 19);
+      padding: 20px;
+    }
+    
+    /* Main column */
+    .main {   
+      flex: 60%;
+      background-color:rgb(18, 18, 19);
+      padding: 20px;
+    }
+    
+    /* Fake image, just for this example */
+    .fakeimg {
+      background-color: #aaa;
+      width: 100%;
+      padding: 20px;
+    }
+    </style>
+    </head>
+    <body style="color:rgb(250, 249, 249);">
+    
+   
+    <div class="row">
+      <div class="side">
+        <div class="header">
+            <h1>CO<sub>2</sub> Prediction</h1>
+            <p>A Machine Learning Model to predict the CO<sub>2</sub> Emission from the Vehicle</p>
+          </div>
+        <h2>Abstract</h2>
+        <img src="static/images/co2_image.jpg" alt="Car Image" height="350"> 
+        <p><i> The problem statement was to build and train a ML model by using the provided data, which will further
+            predict the co2 emmission based on input data. As the data to be predected is a regression type of data, here as a primary
+         approach we have build a model by using Linear Regression Algorithm. While build the model we have used different EDA, Feature Engineering
+          and Feature selection techniques to improve the predection accuracy. currently the model performance wrt r2_socre is above 0.92 for testing 
+          dataset as well as training data set </i></p>
+        <h3>Data Set Information</h3>
+        <p>Understanding the Data
+            <br>Make : <i>Manufacturer of the vehicle</i>
+            <br> Model :	
+            <br> <i>4WD/4X4 = Four-wheel drive
+            <br>        AWD = All-wheel drive
+            <br>        FFV = Flexible-fuel vehicle
+            <br>       SWB = Short wheelbase
+            <br>       LWB = Long wheelbase
+            <br>       EWB = Extended wheelbase </i><br>
+            <br> Transmission :	
+            <br>    <i>A = automatic
+            <br>               AM = automated manual
+            <br>                AS = automatic with select shift
+            <br>                AV = continuously variable
+            <br>                M = manual
+            <br>                3 - 10 = Number of gears </i><br>
+            <br> Fuel type : 
+            <br> <i>X = regular gasoline
+            <br>          Z = premium gasoline
+            <br>          D = diesel
+            <br>          E = ethanol (E85)
+            <br>          N = natural gas </i><br>
+            <br>Fuel consumption City and highway :
+            <br><i> fuel consumption ratings are shown in 
+            <br>    litres per 100 kilometres (L/100 km) - the combined rating (55% city, 45% hwy) 
+                is shown in L/100 km and in miles per imperial gallon (mpg)</i><br>
+            <br>CO2 emissions : 
+            <br><i>	the tailpipe emissions of carbon dioxide (in grams per kilometre) 
+                for combined city and highway driving</i></p>
+        </div>
+      <div class="main" >
+        <marquee> <p style="color:rgb(216, 205, 205);">  <a href = "static\data\co2_prediction_pdf.pdf" style="color:rgb(255, 254, 254);"> To know about how the model is build click here </a></p></marquee>
+        <h4>User Should Entre the Below fields to get the Approx amount of CO<sub>2</sub> Emitted from the Vehicle</h4>
+        <form method="POST" action="/co2_emmission">
+
+            <label style="color:rgb(255, 254, 254);">make:</label>
+            <input type = "text" name = "make" > <i style="color:rgb(0, 225, 255);">*Manufacturer of the vehicle</i> 
+            </select>
+    
+            <br>
+            <br>
+    
+            <label style="color:rgb(255, 254, 254);">model:</label>
+            <input type = "text" name = "model" > <i style="color:rgb(0, 225, 255);">*model of the vehicle</i> 
+            </select>
+           
+            <br>
+            <br>
+    
+            <label style="color:rgb(255, 254, 254);">Vehicle_Class:</label>
+            <select name = "Vehicle_Class">
+                <option value = "SUV - SMALL">SUV_SMALL</option>
+                <option value = "MID-SIZE">MID-SIZE</option>
+                <option value = "COMPACT">COMPACT</option>
+                <option value = "SUV - STANDARD">SUV - STANDARD</option>
+                <option value = "FULL-SIZE">FULL-SIZE</option>
+                <option value = "SUBCOMPACT">SUBCOMPACT</option>
+                <option value = "PICKUP TRUCK - STANDARD">PICKUP TRUCK - STANDARD</option>
+                <option value = "TWO-SEATER">TWO-SEATER</option>
+                <option value = "MINICOMPACT">MINICOMPACT</option>
+                <option value = "STATION WAGON - SMALL">STATION WAGON - SMALL</option>
+                <option value = "PICKUP TRUCK - SMALL">PICKUP TRUCK - SMALL</option>
+                <option value = "MINIVAN">MINIVAN</option>
+                <option value = "SPECIAL PURPOSE VEHICLE">SPECIAL PURPOSE VEHICLE</option>
+                <option value = "VAN - PASSENGER">VAN - PASSENGER</option>
+                <option value = "STATION WAGON - MID-SIZE">STATION WAGON - MID-SIZE</option>
+                <option value = "VAN - CARGO">VAN - CARGO</option>
+    
+            </select> <i style="color:rgb(0, 225, 255);"> *Select vehical class from the dropdown list</i>
+    
+            <br>
+            <br>
+    
+            <label style="color:rgb(255, 254, 254);">Engine_Size:</label>
+            <input type = "text" name = "Engine_Size">
+            </select> <i style="color:rgb(0, 225, 255);"> *type engine size. e.g. 3.3 </i>
+    
+            <br>
+            <br>
+    
+            <label style="color:rgb(255, 254, 254);">Cylinders:</label>
+            <input type = "text" name = "Cylinders">
+            </select> <i style="color:rgb(0, 225, 255);"> *Type No of cylinders e.g. 1 </i>
+    
+            <br>
+            <br>
+    
+            <label style="color:rgb(255, 254, 254);">Transmission:</label>
+            <input type = "text" name = "Transmission">
+            </select> <i style="color:rgb(0, 225, 255);"> *Type Transmission e.g. AS8 </i>
+    
+            <br>
+            <br>
+    
+            <label style="color:rgb(255, 254, 254);">Fuel_Type:</label>
+            <input type = "text" name = "Fuel_Type">
+            </select> <i style="color:rgb(0, 225, 255);"> *Type Transmission e.g. Z </i>
+    
+            <br>
+            <br>
+    
+            <label style="color:rgb(255, 254, 254);">Fuel_Consumption_City1:</label>
+            <input type = "text" name = "Fuel_Consumption_City1">
+            </select> <i style="color:rgb(0, 225, 255);"> *Type Fuel Consumption in City (L/100 km) e.g. 9.9 </i>
+    
+            <br>
+            <br>
+    
+            <label style="color:rgb(255, 254, 254);">Fuel_Consumption_Hwy1:</label>
+            <input type = "text" name = "Fuel_Consumption_Hwy1">
+            </select> <i style="color:rgb(0, 225, 255);"> *Type Fuel Consumption on Hwy (L/100 km) e.g. 6.7 </i>
+    
+            <br>
+            <br>
+    
+            <label style="color:rgb(255, 254, 254);">Fuel_Consumption_Comb2:</label>
+            <input type = "text" name = "Fuel_Consumption_Comb2">
+            </select> <i style="color:rgb(0, 225, 255);"> *Type Fuel Consumption Comb (L/100 km) e.g. 8.5 </i>
+    
+            <br>
+            <br>
+    
+            <label style="color:rgb(255, 254, 254);">Fuel_Consumption_Comb3:</label>
+            <input type = "text" name = "Fuel_Consumption_Comb3">
+            </select> <i style="color:rgb(0, 225, 255);"> *Type Fuel_Consumption in (mpg) e.g. 33 </i>
+    
+            <br>
+            <br>
+    
+            <input type = "submit" value="SUBMIT">
+    
+            <br>
+    
+            <h2 style="color:rgb(252, 247, 251);"><strong>CO<sub>2</sub> emission for selected data is <b> {{ prediction }} g/km.</b> fakta </strong></h2>
+            <img src="static/images/7g7V.gif" alt="Car Image" height="450">
+        </div>
+    </div>
+    
+    </body>
+    </html>
