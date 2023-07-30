@@ -91,8 +91,10 @@
         <p><i> The problem statement was to build and train a ML model by using the provided data, which will further
             predict the co2 emmission based on input data. As the data to be predected is a regression type of data, here as a primary
          approach we have build a model by using Linear Regression Algorithm. While build the model we have used different EDA, Feature Engineering
-          and Feature selection techniques to improve the predection accuracy. currently the model performance wrt r2_socre is above 0.92 for testing 
-          dataset as well as training data set </i></p>
+          and Feature selection techniques to improve the predection accuracy. The model is build by using Linear Regression Algorithm and 
+          decision tree algorithm. currently the Linear Regression model performance wrt r2_socre is above 0.92 for testing 
+          dataset as well as on training data set, whearas performance for Decision Tree model wrt r2_socre is above 0.99 for testing 
+          dataset as well as on training data set. Also the values for MSE and MAE are low and prety close to each other.</i></p>
         <h3>Data Set Information</h3>
         <p>Understanding the Data
             <br>Make : <i>Manufacturer of the vehicle</i>
@@ -125,7 +127,7 @@
                 for combined city and highway driving</i></p>
         </div>
       <div class="main" >
-        <marquee> <p style="color:rgb(216, 205, 205);">  <a href = "static\data\co2_prediction_pdf.pdf" style="color:rgb(255, 254, 254);"> To know about how the model is build click here </a></p></marquee>
+        <marquee> <p style="color:rgb(216, 205, 205);">  <a href = "static\data\co2_pred_dt.pdf" style="color:rgb(255, 254, 254);"> To know about how the model is build click here </a></p></marquee>
         <h4>User Should Entre the Below fields to get the Approx amount of CO<sub>2</sub> Emitted from the Vehicle</h4>
         <form method="POST" action="/co2_emmission">
 
@@ -227,7 +229,7 @@
     
             <br>
     
-            <h2 style="color:rgb(252, 247, 251);"><strong>CO<sub>2</sub> emission for selected data is <b> {{ prediction }} g/km.</b> fakta </strong></h2>
+            <h2 style="color:rgb(252, 247, 251);"><strong>CO<sub>2</sub> emission for selected data is <b> {{ prediction }} g/km.</b> </strong></h2>
             <img src="static/images/7g7V.gif" alt="Car Image" height="450">
         </div>
     </div>
